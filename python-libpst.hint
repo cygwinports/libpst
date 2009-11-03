@@ -1,0 +1,6 @@
+category: Mail Python
+requires: libboost1.40 libgcc1 libpst4 libstdc++6 python
+external-source: libpst
+sdesc: "MS Outlook .pst library (Python bindings)"
+ldesc: "Library and utilities for reading and converting MS Outlook 
+Personal Folders (.pst) files."

@@ -3,7 +3,7 @@ inherit python
 DESCRIPTION="Library for reading MS Outlook Personal Folders (.pst) files"
 HOMEPAGE="http://www.five-ten-sg.com/libpst/"
 SRC_URI="http://www.five-ten-sg.com/libpst/packages/${P}.tar.gz"
-PATCH_URI="0.6.38-no-undefined.patch"
+PATCH_URI="0.6.44-no-undefined.patch"
 
 PKG_NAMES="${PN} ${PN}4 ${PN}-devel python-${PN}"
 libpst_CONTENTS="usr/bin/*.exe usr/share/"

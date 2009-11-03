@@ -1,0 +1,5 @@
+category: Mail
+requires: libgcc1 libgd2 libpst4 libstdc++6
+sdesc: "MS Outlook .pst utilities"
+ldesc: "Library and utilities for reading and converting MS Outlook 
+Personal Folders (.pst) files."
