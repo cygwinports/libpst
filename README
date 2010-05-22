@@ -4,28 +4,27 @@ Library and utilities for reading and converting MS Outlook Personal
 Folders (.pst) files.
 
 Runtime requirements:
-  cygwin-1.7.0-62
-  libgcc1-4.3.4-1
+  cygwin-1.7.5-1
+  libgcc1-4.3.4-3
   libgd2-2.0.36RC1-10
-  libiconv2-1.13-10
-  libstdc++6-4.3.4-1
+  libiconv2-1.13.1-1
+  libstdc++6-4.3.4-3
 (python-libpst)
-  libboost1.40-1.40.0-1
-  python-2.5.4-10
+  libboost_python1.43-1.43.0-1
+  python-2.6.5-1
 
 Build requirements:
 (besides corresponding -devel packages)
-  autoconf2.5-2.63-10
-  automake1.10-1.10.2-10
-  binutils-2.19.51-1
-  cygport-0.9.9-1
+  autoconf2.5-2.65-1
+  automake1.10-1.10.3-1
+  binutils-2.20.51-2
+  cygport-0.9.84-1
   gawk-3.1.7-1
-  gcc4-core-4.3.4-1
-  gcc4-g++-4.3.4-1
-  libtool-2.2.7a-14
+  gcc4-core-4.3.4-3
+  gcc4-g++-4.3.4-3
+  libtool-2.2.7a-15
   make-3.81-2
   pkg-config-0.23b-10
-  sed-4.1.5-2
 
 Canonical website:
   http://www.five-ten-sg.com/libpst/
@@ -36,22 +35,25 @@ Canonical download:
 -------------------------------------------
 
 Build instructions:
-  unpack libpst-0.6.44-X-src.tar.bz2
+  unpack libpst-0.6.45-X-src.tar.bz2
     if you use setup to install this src package, it will be
 	 unpacked under /usr/src automatically
   cd /usr/src
-  cygport ./libpst-0.6.44-X.cygport all
+  cygport ./libpst-0.6.45-X.cygport all
 
 This will create:
-  /usr/src/libpst-0.6.44-X-src.tar.bz2
-  /usr/src/libpst-0.6.44-X.tar.bz2
-  /usr/src/libpst-devel-0.6.44-X.tar.bz2
-  /usr/src/libpst4-0.6.44-X.tar.bz2
-  /usr/src/python-libpst-0.6.44-X.tar.bz2
+  /usr/src/libpst-0.6.45-X-src.tar.bz2
+  /usr/src/libpst-0.6.45-X.tar.bz2
+  /usr/src/libpst-devel-0.6.45-X.tar.bz2
+  /usr/src/libpst4-0.6.45-X.tar.bz2
+  /usr/src/python-libpst-0.6.45-X.tar.bz2
 
 -------------------------------------------
 
 Port Notes:
+
+----- version 0.6.45-1 -----
+Version bump; bindings built for Python 2.6.
 
 ----- version 0.6.44-1 -----
 Initial release for Cygwin 1.7.
