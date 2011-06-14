@@ -12,6 +12,5 @@ libpst_devel_CONTENTS="usr/include/ usr/lib/lib* usr/lib/pkgconfig/"
 python_libpst_CONTENTS=${PYTHON_SITELIB#/}
 
 ACLOCAL_FLAGS="-I m4"
-# WARNING: --enable-python check uses locate(1), run updatedb(1) first!!
-CYGCONF_ARGS="--enable-libpst-shared --enable-python"
+CYGCONF_ARGS="--enable-libpst-shared --enable-python --with-boost-python=mt"
 MAKEOPTS+=" htmldir=/usr/share/doc/${PN}"
