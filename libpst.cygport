@@ -1,16 +1,28 @@
 inherit python
 
-DESCRIPTION="Library for reading MS Outlook Personal Folders (.pst) files"
+NAME="libpst"
+VERSION=0.6.58
+RELEASE=1
+CATEGORY="Mail"
+SUMMARY="MS Outlook .pst utilities"
+DESCRIPTION="Library and utilities for reading and converting MS Outlook
+Personal Folders (.pst) files."
 HOMEPAGE="http://www.five-ten-sg.com/libpst/"
 SRC_URI="http://www.five-ten-sg.com/libpst/packages/${P}.tar.gz"
 PATCH_URI="0.6.44-no-undefined.patch"
 
 PKG_NAMES="${PN} ${PN}4 ${PN}-devel python-${PN}"
 libpst_CONTENTS="usr/bin/*.exe usr/share/"
+libpst4_CONTENTS="MS Outlook .pst library (runtime)"
 libpst4_CONTENTS="usr/bin/cygpst-4.dll"
+libpst_devel_CONTENTS="MS Outlook .pst library (development)"
 libpst_devel_CONTENTS="usr/include/ usr/lib/lib* usr/lib/pkgconfig/"
+python_libpst_CATEGORY="Python"
+python_libpst_CONTENTS="MS Outlook .pst library (Python bindings)"
 python_libpst_CONTENTS=${PYTHON_SITELIB#/}
 
 ACLOCAL_FLAGS="-I m4"
 CYGCONF_ARGS="--enable-libpst-shared --enable-python --with-boost-python=mt"
 MAKEOPTS+=" htmldir=/usr/share/doc/${PN}"
+
+KEEP_LA_FILES="none"

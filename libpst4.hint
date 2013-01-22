@@ -1,6 +1,0 @@
-category: Mail
-requires: libgcc1 libiconv2
-external-source: libpst
-sdesc: "MS Outlook .pst library (runtime)"
-ldesc: "Library and utilities for reading and converting MS Outlook 
-Personal Folders (.pst) files."

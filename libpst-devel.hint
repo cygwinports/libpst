@@ -1,6 +1,0 @@
-category: Mail
-requires: libpst4 libiconv
-external-source: libpst
-sdesc: "MS Outlook .pst library (development)"
-ldesc: "Library and utilities for reading and converting MS Outlook 
-Personal Folders (.pst) files."
