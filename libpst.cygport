@@ -1,27 +1,29 @@
 inherit python
 
 NAME="libpst"
-VERSION=0.6.63
-RELEASE=2
-CATEGORY="Mail"
-SUMMARY="MS Outlook .pst utilities"
+VERSION=0.6.64
+RELEASE=1
+CATEGORY="Libs"
+SUMMARY="MS Outlook .pst library"
 DESCRIPTION="Library and utilities for reading and converting MS Outlook
 Personal Folders (.pst) files."
 HOMEPAGE="http://www.five-ten-sg.com/libpst/"
 SRC_URI="http://www.five-ten-sg.com/libpst/packages/libpst-${VERSION}.tar.gz"
 PATCH_URI="0.6.44-no-undefined.patch"
 
-PKG_NAMES="libpst libpst4 libpst-devel python-libpst"
-libpst_CONTENTS="usr/bin/*.exe usr/share/"
-libpst4_CATEGORY="Libs"
-libpst4_CONTENTS="MS Outlook .pst library (runtime)"
+PKG_NAMES="libpst libpst4 libpst-devel python-libpst readpst"
+libpst_CATEGORY="_obsolete"
+libpst_REQUIRES="readpst"
+libpst4_CONTENTS="${SUMMARY} (runtime)"
 libpst4_CONTENTS="usr/bin/cygpst-4.dll"
-libpst_devel_CATEGORY="Libs"
-libpst_devel_CONTENTS="MS Outlook .pst library (development)"
+libpst_devel_CONTENTS="${SUMMARY} (development)"
 libpst_devel_CONTENTS="usr/include/ usr/lib/lib* usr/lib/pkgconfig/"
 python_libpst_CATEGORY="Python"
-python_libpst_CONTENTS="MS Outlook .pst library (Python bindings)"
+python_libpst_CONTENTS="${SUMMARY} (Python bindings)"
 python_libpst_CONTENTS=${PYTHON_SITELIB#/}
+readpst_CATEGORY="Mail"
+readpst_SUMMARY=${SUMMARY/library/utilities}
+readpst_CONTENTS="usr/bin/*.exe usr/share/"
 
 ACLOCAL_FLAGS="-I m4"
 CYGCONF_ARGS="--enable-libpst-shared --enable-python"
