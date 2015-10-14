@@ -1,8 +1,8 @@
 inherit python
 
 NAME="libpst"
-VERSION=0.6.64
-RELEASE=2
+VERSION=0.6.65
+RELEASE=1
 CATEGORY="Libs"
 SUMMARY="MS Outlook .pst library"
 DESCRIPTION="Library and utilities for reading and converting MS Outlook
