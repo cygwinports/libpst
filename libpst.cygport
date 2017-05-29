@@ -1,7 +1,7 @@
-inherit python
+inherit python2
 
 NAME="libpst"
-VERSION=0.6.67
+VERSION=0.6.70
 RELEASE=1
 CATEGORY="Libs"
 SUMMARY="MS Outlook .pst library"
@@ -11,16 +11,17 @@ HOMEPAGE="http://www.five-ten-sg.com/libpst/"
 SRC_URI="http://www.five-ten-sg.com/libpst/packages/libpst-${VERSION}.tar.gz"
 PATCH_URI="0.6.44-no-undefined.patch"
 
-PKG_NAMES="libpst libpst4 libpst-devel python-libpst readpst"
+PKG_NAMES="libpst libpst4 libpst-devel python2-libpst readpst"
 libpst_CATEGORY="_obsolete"
 libpst_REQUIRES="readpst"
-libpst4_CONTENTS="${SUMMARY} (runtime)"
+libpst4_SUMMARY="${SUMMARY} (runtime)"
 libpst4_CONTENTS="usr/bin/cygpst-4.dll"
-libpst_devel_CONTENTS="${SUMMARY} (development)"
+libpst_devel_SUMMARY="${SUMMARY} (development)"
 libpst_devel_CONTENTS="usr/include/ usr/lib/lib* usr/lib/pkgconfig/"
-python_libpst_CATEGORY="Python"
-python_libpst_CONTENTS="${SUMMARY} (Python bindings)"
-python_libpst_CONTENTS=${PYTHON_SITELIB#/}
+python2_libpst_CATEGORY="Python"
+python2_libpst_SUMMARY="${SUMMARY} (Python bindings)"
+python2_libpst_OBSOLETES="python-libpst"
+python2_libpst_CONTENTS=${PYTHON2_SITELIB#/}
 readpst_CATEGORY="Mail"
 readpst_SUMMARY=${SUMMARY/library/utilities}
 readpst_CONTENTS="usr/bin/*.exe usr/share/"
@@ -28,5 +29,3 @@ readpst_CONTENTS="usr/bin/*.exe usr/share/"
 ACLOCAL_FLAGS="-I m4"
 CYGCONF_ARGS="--enable-libpst-shared --enable-python"
 MAKEOPTS+=" htmldir=/usr/share/doc/${NAME}"
-
-KEEP_LA_FILES="none"
